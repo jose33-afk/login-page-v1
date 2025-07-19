@@ -1,0 +1,30 @@
+.texto-inicial {
+    margin: 1% 0;
+}
+
+.texto-inicial__titolo {
+    text-align: center;
+    font-size: calc(1rem + 1vw);
+}
+
+.texto-inicial__paragrafo {
+    text-align: justify;
+    padding: 2% 5%;
+    font-size: clamp(0.9rem, 1vw + 0.3rem, 1.2rem);
+}
+
+@media (min-width: 768px) and (max-width: 1045px) {
+    .texto-inicial {
+        position: relative;
+        left: 28%;
+        width: 40%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .texto-inicial {
+        position: relative;
+        left: -5%;
+        width: 40%;
+    }
+}

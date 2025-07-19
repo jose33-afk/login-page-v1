@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --branco: white;
+    --cor-background: #1d3557;
+    --cor-background-body: linear-gradient(to bottom, #1d3557, #a8dadc, #182b46);
+    --preto: black;
+    --tom-um: #457b9d;
+    --tom-dois: #a8dadc; 
+    --tom-tres: #f1faee;
+    --tom-quatro: #e63946;
+}

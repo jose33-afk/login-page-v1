@@ -1,0 +1,98 @@
+.formulario {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario__input {
+    align-items: center;
+    background-color: var(--cor-background);
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.384);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin: 2% auto;
+    height: 55%;
+    width: 92%;
+}
+
+.formulario__input--img {
+    height: 2.5vh;
+}
+
+.formulario__input--input {
+    all: unset; /*tira todos os estilos*/
+    border-radius: 10px;
+    border: 2px solid transparent;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.425);
+    font-size: 1em;
+    height: 60%;
+    background-color: var(--branco);
+    color: var(--preto);
+    text-align: center; /*| e texto dentro*/
+}
+
+.formulario__input--input.linha{
+    border: none;
+    border-bottom: 3px solid transparent;
+}
+
+/*Animacao*/
+@keyframes piscaBorda {
+  0%   { border-color: transparent; }  /* Início: borda invisível */
+  50%  { border-color: var(--tom-dois); } /* Meio: borda visível (azul, por exemplo*/
+  100% { border-color: transparent; }  /* Fim: borda invisível novamente */
+}
+
+
+.formulario__input--input:focus { 
+    animation: piscaBorda 1.2s infinite;
+}
+
+@media (min-width: 768px) and (max-width: 1045px) {
+    .formulario__input--linha {
+        background-color: var(--tom-dois);
+        position: absolute;
+        top: clamp(30%, 62%, 80%);
+        left: 23%;
+        opacity: 0;
+        transition: opacity 0.3 ease;
+        height: 2px;
+        width: 65%;
+    }
+}
+
+@media (min-width: 1036px) {
+    .formulario {
+        position: absolute;
+        top: 45%;
+        left: 6%;
+    }
+
+    .formulario__input {
+        width: 20vw;
+    }
+
+    .formulario__input--input {
+        height: 3vh;
+        width: 14vw;
+    }
+
+    .formulario__input--input.linha:focus { 
+    animation: piscaBorda 1.2s infinite;
+}
+}
+
+
+/*
+    1 - + ele "ativa o estilo da caixa logo abaxixo, e o estivo vai ser aplicado ao
+    segundo elemento"
+
+    2 - para criar animaçoes, o primeiro é propriedade; border:color etc
+        a porcentagem é o tempo, o tempo é definido em 
+        animation: nomeDaAnimacao duração repetição; a porcetagem no key 
+        é quanto é dividido a animaçao em duraçao 0.5s
+a por
+*/

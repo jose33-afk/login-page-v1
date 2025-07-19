@@ -1,0 +1,40 @@
+main {
+    background-color: var(--branco);
+    border-radius: 15px;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    height: 80vh;
+    width: 85vw;
+}
+
+.main__img {
+    background-image: url(../../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px 15px 0 0; /*cima, baixo*/
+    height: 40%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.267);
+}
+
+
+@media (min-width: 1045px) { 
+    main {
+        top: 31%;
+        left: 25%;
+        width: 50vw;
+        position: relative; 
+        display: flex;
+        flex-direction: row-reverse;
+        height: 37vh;
+    }
+
+    .main__img {
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 15px;
+        height: 100%;
+        width: 50%;
+    }
+}   
+
